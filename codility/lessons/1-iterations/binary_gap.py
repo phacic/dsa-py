@@ -27,6 +27,6 @@ def to_bin(n: int) -> str:
     return b[2:]
 
 
-# if __name__ == "__main__":
-#     print(solution(1041))
+if __name__ == "__main__":
+    print(solution(1041))
 #     print(solution(32))

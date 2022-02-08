@@ -20,7 +20,29 @@ def rotate(times, index, length):
     return (index + times) % length
 
 
-# if __name__ == "__main__":
-#     print(solution([3, 8, 9, 7, 6], 3))
+def solution2(A: List, K: int):
+    """
+    rotate A, K times
+
+    if value of K is within the length of the Array (K <= length(A)) then, 
+    the item at the Kth will be the first item at the end of the rotation.
+
+    The issue with this approach is that of when K > length(A) then we could
+    use K mod length(A) to find the new K
+    """
+
+    # find the start index 
+    start_index = K - 1
+
+    head = A[start_index:]
+    tail = A[:start_index]
+
+    return head + tail
+
+
+if __name__ == "__main__":
+    # print(solution([3, 8, 9, 7, 6], 3))
+    print(solution2([3, 8, 9, 7, 6], 3))
+
 #     print(solution([0, 0, 0], 1))
 #     print(solution([1, 2, 3, 4], 4))
