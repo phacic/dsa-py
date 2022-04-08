@@ -6,8 +6,7 @@ def carParkingRoof(cars: list, k):
     mx = max(to_cover)
     mi = min(to_cover)
 
-    cover_length = mx - (mi - 1)
-    return cover_length
+    return mx - (mi - 1)
 
 
 def process_file(filename: str) -> tuple:
